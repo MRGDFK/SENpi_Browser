@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:id="browserBP" minWidth="480.0" prefHeight="396.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SEN_pi_Browser.BrowserController">
+   <center>
+      <BorderPane prefHeight="248.0" prefWidth="333.0">
+         <center>
+            <WebView fx:id="browserWV" prefHeight="200.0" prefWidth="200.0" />
+         </center>
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" onAction="#browserBackButtonAction" text="◀">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Back" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#browserForwardButtonAction" text="▶">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/forward.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Forward" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#browserStopReloadButtonAction" text="❌">
+                     <graphic>
+                        <ImageView fx:id="stopReloadIV" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reload.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#browserHomeButtonAction" text="🏠">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox>
+                     <children>
+                        <TextField fx:id="addressBarTF" onAction="#browserGoButtonAction" prefHeight="26.0" prefWidth="492.0" />
+                        <ProgressIndicator fx:id="progressPI" maxHeight="24.0" maxWidth="24.0" minHeight="16.0" minWidth="16.0" prefHeight="24.0" prefWidth="24.0" visible="false">
+                           <HBox.margin>
+                              <Insets left="-24.0" />
+                           </HBox.margin>
+                        </ProgressIndicator>
+                        <Button mnemonicParsing="false" onAction="#dHistory" text="History">
+                           <HBox.margin>
+                              <Insets left="500.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#zoomIn" text="+">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#zoomout" text="-">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="30.0" layoutY="30.0" mnemonicParsing="false" onAction="#refreshPage" text="Refresh">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+              </items>
+            </ToolBar>
+         </top>
+         <bottom>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="statusL" prefHeight="16.0" prefWidth="662.0" text="Status" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,43 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 29, 2023, 3:13:40 AM
+    Author     : MRGDFK
+*/
+.login-bg{
+    -fx-background-color:linear-gradient(to bottom right, #6a9ae7, #426fb1);
+    
+     
+}
+.login-card{
+    -fx-background-color: #30363f;
+}
+
+.textfield-design{
+    -fx-background-color:#e0f0ff;
+    -fx-background-radius: 20px;
+    -fx-border-color: #30363f;
+    -fx-border-radius: 20px;
+    -fx-text-inner-color: #000;
+    
+}
+.button-design{
+    -fx-background-color: #30363f;
+    -fx-background-radius: 40px;
+    -fx-text-fill: #fff;
+    -fx-cursor:hand;
+}
+.button-design:hover{
+    -fx-background-color: #6a9ae7;
+}
+.hypertext-design{
+    -fx-text-fill: #fff;
+    -fx-border-color: none;
+    -fx-border-width: 0px;
+}
+.welcomepage-design{
+    -fx-background-color:linear-gradient(to bottom right, #6a9ae7, #30363f);
+    
+}
